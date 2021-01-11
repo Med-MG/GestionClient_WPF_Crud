@@ -18,7 +18,7 @@
             </ComboBox.Items>
             
         </hc:ComboBox>
-        <Button Content="Insert" HorizontalAlignment="Left" Margin="99,287,0,0" VerticalAlignment="Top" Width="205" Foreground="White" Background="#FF34495E"/>
+        <Button x:Name="insertBtn" Content="Insert" HorizontalAlignment="Left" Margin="99,287,0,0" VerticalAlignment="Top" Width="205" Foreground="White" Background="#FF34495E"/>
         <TextBlock HorizontalAlignment="Left" Margin="24,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="First Name"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Last Name"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Adresse"/>
