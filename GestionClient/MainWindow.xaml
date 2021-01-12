@@ -6,9 +6,33 @@
         xmlns:local="clr-namespace:GestionClient"
         xmlns:hc="https://handyorg.github.io/handycontrol" x:Class="GestionClient.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="600">
+        Title="MainWindow" Height="600" Width="800">
     <DockPanel>
-        <DataGrid x:Name="myDataGrid"  AutoGenerateColumns="False" ColumnWidth="*"  />
+        <DataGrid x:Name="myDataGrid" HeadersVisibility="All" RowHeaderWidth="60" AutoGenerateColumns="False" ItemsSource="{Binding DataList}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding id}" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                <DataGridTextColumn Header="City" Binding="{Binding City}" />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="Action" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.HeaderTemplate>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button x:Name="insertBtn" Content="Insert" Click="insertBtn_Click"  />
+                                <Button x:Name="updateBtn" Content="Update"  />
+                                <Button x:Name="deleteBtn" Content="Delete"   />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </DockPanel>
 
 </Window>

@@ -20,11 +20,26 @@ namespace GestionClient
     /// </summary>
     public partial class MainWindow : Window
     {
+        //wpfCrudEntities _db = new wpfCrudEntities();
+        GestionClientdbEntitiesL _db = new GestionClientdbEntitiesL();
+        public static DataGrid datagrid;
         public MainWindow()
         {
             InitializeComponent();
+            Load();
         }
 
-       
+        private void Load()
+        {
+            myDataGrid.ItemsSource = _db.Clients.ToList();
+            datagrid = myDataGrid;
+        }
+
+        private void insertBtn_Click(object sender, RoutedEventArgs e)
+        {
+            InsertPage Ipage = new InsertPage();
+
+            Ipage.ShowDialog();
+        }
     }
 }
