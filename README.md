@@ -2,5 +2,5 @@
 Brief projet " Accéder aux données à l’aide de l’ADO.NET " 
 
 ##Project Screenshots
-
-<img src="/screenshots/crud.png" alt="main window" />
+![][./screenshots/crud.png]
+<img src="./screenshots/crud.png" alt="main window" />
