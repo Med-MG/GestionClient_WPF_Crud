@@ -41,5 +41,22 @@ namespace GestionClient
 
             Ipage.ShowDialog();
         }
+
+        private void updateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int Id = (myDataGrid.SelectedItem as Client).id;
+            UpdatePage UpdatePage = new UpdatePage(Id);
+            UpdatePage.ShowDialog();
+
+        }
+
+        private void deleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            int Id = (myDataGrid.SelectedItem as Client).id;
+            var deleteClient = _db.Clients.Where(m => m.id == Id).Single();
+            _db.Clients.Remove(deleteClient);
+            _db.SaveChanges();
+            myDataGrid.ItemsSource = _db.Clients.ToList();
+        }
     }
 }

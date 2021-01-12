@@ -8,8 +8,8 @@
         mc:Ignorable="d"
         Title="UpdatePage" Height="400" Width="400">
     <Grid>
-        <TextBox x:Name="firstName" HorizontalAlignment="Left" Height="23" Margin="116,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Text="your first name" BorderBrush="#FFE0E0E0" Background="White" Foreground="#8C000000"/>
-        <TextBox x:Name="lastName" HorizontalAlignment="Left" Height="23" Margin="116,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" RenderTransformOrigin="0.1,-2.044" Text="your last first name" Foreground="#8C212121"/>
+        <TextBox x:Name="firstNameTbox" HorizontalAlignment="Left" Height="23" Margin="116,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" Text="your first name" BorderBrush="#FFE0E0E0" Background="White" Foreground="#8C000000"/>
+        <TextBox x:Name="lastNameTbox" HorizontalAlignment="Left" Height="23" Margin="116,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" RenderTransformOrigin="0.1,-2.044" Text="your last first name" Foreground="#8C212121"/>
         <ComboBox x:Name="CityBox" HorizontalAlignment="Left" Margin="116,183,0,0" VerticalAlignment="Top" Width="226" RenderTransformOrigin="0.542,0.689" Height="28">
             <ComboBox.Items>
                 <ComboBoxItem>Marrakech</ComboBoxItem>
@@ -18,11 +18,11 @@
             </ComboBox.Items>
 
         </ComboBox>
-        <Button x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Margin="99,287,0,0" VerticalAlignment="Top" Width="205" Foreground="White" Background="#FF34495E"/>
+        <Button x:Name="UpdateBtn" Content="Update" HorizontalAlignment="Left" Margin="99,287,0,0" VerticalAlignment="Top" Width="205" Foreground="White" Background="#FF34495E" Click="UpdateBtn_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="24,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="First Name"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Last Name"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Adresse"/>
-        <TextBox x:Name="Address" HorizontalAlignment="Left" Height="23" Margin="116,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" RenderTransformOrigin="0.1,-2.044" Text="your address" Foreground="#8C212121"/>
+        <TextBox x:Name="AddressTbox" HorizontalAlignment="Left" Height="23" Margin="116,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" RenderTransformOrigin="0.1,-2.044" Text="your address" Foreground="#8C212121"/>
         <TextBlock HorizontalAlignment="Left" Margin="25,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="City"/>
 
 

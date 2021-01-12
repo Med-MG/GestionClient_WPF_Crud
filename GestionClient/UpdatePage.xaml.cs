@@ -19,9 +19,24 @@ namespace GestionClient
     /// </summary>
     public partial class UpdatePage : Window
     {
-        public UpdatePage()
+        GestionClientdbEntitiesL _db = new GestionClientdbEntitiesL();
+        int Id;
+        public UpdatePage(int ClientId)
         {
             InitializeComponent();
+            Id = ClientId;
+        }
+
+        private void UpdateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Client updateClient = (from c in _db.Clients where c.id == Id select c).Single();
+            updateClient.FirstName = firstNameTbox.Text;
+            updateClient.LastName = lastNameTbox.Text;
+            updateClient.Address = AddressTbox.Text;
+            updateClient.City = CityBox.Text;
+            _db.SaveChanges();
+            MainWindow.datagrid.ItemsSource = _db.Clients.ToList();
+            this.Hide();
         }
     }
 }
